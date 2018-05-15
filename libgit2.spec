@@ -1,11 +1,11 @@
-%define major 26
+%define major 27
 %define libname %mklibname git2 %{major}
 %define devname %mklibname git2 -d
 
 Name: libgit2
-Version: 0.26.0
+Version: 0.27.0
 Release: 1
-Source0: https://github.com/%{name}/%{name}/archive/%{name}-%{version}.tar.gz
+Source0: https://github.com/libgit2/libgit2/archive/v%{version}.tar.gz
 Summary: Git core methods provided as a re-entrant linkable library
 URL: http://libgit2.github.com
 License: GPLv2 with linking exception
