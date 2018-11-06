@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   libgit2-0.26.0.tar.gz: d4e44fcf3ada97caeaa3ab698105c107600bb3ab
+sources:
+  libgit2-0.26.8.tar.gz: ec4242317439239e53c5a137f918fcee9d21bcef
