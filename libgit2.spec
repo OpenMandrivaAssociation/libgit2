@@ -1,4 +1,4 @@
-%define major 27
+%define major 28
 %define libname %mklibname git2 %{major}
 %define devname %mklibname git2 -d
 
