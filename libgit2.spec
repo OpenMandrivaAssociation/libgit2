@@ -3,7 +3,7 @@
 %define devname %mklibname git2 -d
 
 Name: libgit2
-Version:	0.28.4
+Version:	0.28.5
 Release:	1
 Source0: https://github.com/libgit2/libgit2/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary: Git core methods provided as a re-entrant linkable library
@@ -12,7 +12,8 @@ License: GPLv2 with linking exception
 Group: System/Libraries
 BuildRequires: cmake
 BuildRequires: ninja
-BuildRequires: python2
+BuildRequires: python
+BuildRequires: http-parser-devel
 BuildRequires: pkgconfig(libssl)
 BuildRequires: pkgconfig(libcrypto)
 BuildRequires: pkgconfig(libssh2)
@@ -39,7 +40,7 @@ Development files (Headers etc.) for %{name}.
 %prep
 %setup -q
 %cmake -G Ninja \
-	-DPYTHON_EXECUTABLE:FILEPATH=%{_bindir}/python2
+	  -DSHA1_BACKEND=OpenSSL
 
 %build
 ninja -C build
