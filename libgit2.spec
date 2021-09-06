@@ -1,9 +1,9 @@
-%define major 28
+%define major 1
 %define libname %mklibname git2 %{major}
 %define devname %mklibname git2 -d
 
 Name: libgit2
-Version:	0.28.5
+Version:	1.2.0
 Release:	1
 Source0: https://github.com/libgit2/libgit2/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary: Git core methods provided as a re-entrant linkable library
@@ -50,7 +50,6 @@ DESTDIR="%{buildroot}" ninja install -C build
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
-%{_libdir}/*.so.0*
 
 %files -n %{devname}
 %{_includedir}/*
