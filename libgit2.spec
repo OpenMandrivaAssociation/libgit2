@@ -3,7 +3,7 @@
 %define devname %mklibname git2 -d
 
 Name: libgit2
-Version:	1.4.4
+Version:	1.5.0
 Release:	1
 Source0: https://github.com/libgit2/libgit2/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary: Git core methods provided as a re-entrant linkable library
@@ -18,6 +18,7 @@ BuildRequires: pkgconfig(libssl)
 BuildRequires: pkgconfig(libcrypto)
 BuildRequires: pkgconfig(libssh2)
 BuildRequires: pkgconfig(zlib)
+Requires: %{libname} = %{EVRD}
 
 %description
 Git core methods provided as a re-entrant linkable library
@@ -48,6 +49,9 @@ ninja -C build
 
 %install
 DESTDIR="%{buildroot}" ninja install -C build
+
+%files
+%{_bindir}/git2_cli
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
