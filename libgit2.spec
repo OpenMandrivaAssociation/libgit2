@@ -4,7 +4,7 @@
 
 Name: libgit2
 Version:	1.6.3
-Release:	1
+Release:	2
 Source0: https://github.com/libgit2/libgit2/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary: Git core methods provided as a re-entrant linkable library
 URL: http://libgit2.github.com
