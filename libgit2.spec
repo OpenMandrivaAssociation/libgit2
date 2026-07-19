@@ -3,8 +3,8 @@
 %define devname %mklibname git2 -d
 
 Name:		libgit2
-Version:	1.9.4
-Release:	2
+Version:	1.9.6
+Release:	1
 Source0: https://github.com/libgit2/libgit2/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary: Git core methods provided as a re-entrant linkable library
 URL: https://libgit2.github.com
